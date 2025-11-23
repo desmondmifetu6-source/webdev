@@ -1,0 +1,81 @@
+/* ————— THE AI’S STYLE ————— */
+
+:root {
+    --accent: #f5b642;   /* Koenigsegg gold */
+    --text-light: #eeeeee;
+    --text-dark: #111111;
+    --bg-dark: #0a0a0a;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 60px 20px;
+    background-image: url(pictures/gemera_interior1.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* dark overlay so text pops */
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
+}
+
+header * {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+header p {
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+header a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 2px solid var(--accent);
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+header a:hover {
+    background: var(--accent);
+    color: var(--text-dark);
+}
+
+h2 {
+    margin: 40px 20px 10px;
+    font-family: 'Courier New', monospace;
+    color: var(--accent);
+}
+
+p {
+    margin: 0 20px 40px;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
